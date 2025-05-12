@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>NSA - Online</title>
-        <link rel="icon" type="image/png" href="favicon.png">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NSA - Online</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-        <link rel="stylesheet" href="style.css">
-      </head>
-      
 <body>
   <div class="container">
     <div class="login-box">
       <img src="nsaonline.png" alt="NSA Online Logo" class="logo">
 
-      <div class="form-group">
-        <label>Entrar como:</label>
-        <select id="alunotam">
-          <option>ALUNO</option>
-          <option>ETEC</option>
-          <option>PROFESSOR</option>
-          <option>RESPONSÁVEL</option>
-          <option>SUPERVISÃO</option>
-          <option>MONITORAMENTO</option>
-        </select>
+      <!-- Início do formulário -->
+      <form action="enviar_email.php" method="POST">
+        <div class="form-group">
+          <label>Entrar como:</label>
+          <select name="perfil">
+            <option>ALUNO</option>
+            <option>ETEC</option>
+            <option>PROFESSOR</option>
+            <option>RESPONSÁVEL</option>
+            <option>SUPERVISÃO</option>
+            <option>MONITORAMENTO</option>
+          </select>
 
-        <label class="codetec">Cod. Etec:</label>
-        <input type="text" class="etec-code" maxlength="4">
-        <button class="help-button">?</button>
-      </div>
+          <label class="codetec">Cod. Etec:</label>
+          <input type="text" name="codetec" class="etec-code" maxlength="4">
+          <button type="button" class="help-button">?</button>
+        </div>
 
-      <div class="form-group">
-        <label>RM:</label>
-        <input type="text" placeholder="Digite seu login">
-        <label class="codetec">Senha:</label>
-        <input id="passwordtam" type="password" placeholder="Digite sua senha">
-        <button class="enter-button">ENTRAR</button>
-      </div>
+        <div class="form-group">
+          <label>RM:</label>
+          <input type="text" name="rm" placeholder="Digite seu login">
+          <label class="codetec">Senha:</label>
+          <input type="password" name="senha" id="passwordtam" placeholder="Digite sua senha">
+          <button type="submit" class="enter-button">ENTRAR</button>
+        </div>
+      </form>
+      <!-- Fim do formulário -->
 
       <a href="#" class="link">Solicitar nova senha</a>
 
