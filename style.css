@@ -60,19 +60,41 @@ body {
     border-radius: 5px;
     cursor: pointer;
   }
+
+  select[name="perfil"]:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid #444; /* opcional, para destacar */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Opcional: manter as opções com fundo preto e texto branco */
+select[name="perfil"]:hover option {
+  background-color: black;
+  color: white;
+}
+
   
-  .enter-button {
-    padding: 8px 20px;
-    background: #222;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+.enter-button {
+  padding: 8px 20px;
+  background: #222;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.enter-button:hover {
+  background-color: #555555;
+  color: white;
+}
+
+
   
   .link {
     display: block;
-    margin-top: 10px;
+    margin-top: 30px;
     color: #1a58d9;
     text-decoration: none;
   }
@@ -80,7 +102,7 @@ body {
   .app-icons {
     display: flex;
     justify-content: space-around;
-    margin-top: 20px;
+    margin-top: 5px;
   }
   .icon {
     width: 100px; /* Aumentado de 40px para 80px */
